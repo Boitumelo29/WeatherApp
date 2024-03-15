@@ -13,14 +13,16 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: aqua;
+    background-color: rgb(136, 202, 202);
 }
 
 .container{
 position: relative;
 width: 400px;
 height: 555px;
-background-color: blue;
+backdrop-filter: blur(100px);
+border: 2px solid rgba(255, 255, 255, .4);
+background: rgba(255, 255, 255, .2);
 border-radius: 16px;
 padding: 20px;
 color: #fff;
@@ -102,4 +104,47 @@ color: #fff;
     font-size: 20px;
     font-weight: 200;
     text-transform: capitalize;
+}
+
+.weather-details{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+}
+
+.weather-details .humidity, .weather-details .wind{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.weather-details .humidity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+.weather-details .wind{
+    padding: 20px;
+    justify-content: flex-end;
+
+}
+
+.weather-details i{
+    font-size: 56px;
+    margin-right: 10px;
+}
+
+.weather-details span{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 500;
+
+}
+
+.weather-details p{
+    font-size: 14px;
+    font-weight: 500;
 }
